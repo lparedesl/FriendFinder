@@ -1,0 +1,44 @@
+<main>
+	<div class="container">
+		<section class="row">
+			<div class="col s12">
+				<h1>{{title}}</h1>
+			</div>
+		</section>
+		<section class="row">
+			<form class="col s12">
+				<legend><h2>About You</h2></legend>
+				<div class="row">
+					<div class="input-field col s6">
+						<label for="name">Name (Required)</label>
+						<input name="name" type="text" class="validate">
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s6">
+						<label for="img">Link to Photo image (Required)</label>
+						<input name="img" type="text" class="validate">
+					</div>
+				</div>
+				<legend><h2>Questions</h2></legend>
+				{{#each questions as |question|}}
+					<legend><h3>{{question.[1]}}</h3></legend>
+					<div class="row">
+						<div class="input-field col s2">
+							<select name="q{{question.[0]}}">
+								<option value="" disabled selected>Choose your option</option>
+								<option value="1">1 (Strongly Disagree)</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5 (Strongly Agree)</option>
+							</select>
+						</div>
+					</div>
+				{{/each}}
+				<button type="submit" class="waves-effect waves-light btn light-green" id="submit"><i class="fa fa-check" aria-hidden="true"></i> Submit</button>
+			</form>
+		</section>
+	</div>
+</main>
+<script type="text/javascript" src="/javascript/home.js"></script>

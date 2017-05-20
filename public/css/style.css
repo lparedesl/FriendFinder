@@ -1,0 +1,495 @@
+@font-face {
+  font-family: "Harabara Mais";
+  src: url("../fonts/harabara-mais/Harabara Mais.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Simplifica";
+  src: url("../fonts/Simplifica.ttf");
+}
+.welcome {
+  font-family: "Simplifica";
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: red;
+  /* For browsers that do not support gradients */
+  background: -webkit-radial-gradient(#2d2d2d, #1c1c1c, #000000);
+  /* Safari 5.1 to 6.0 */
+  background: -o-radial-gradient(#2d2d2d, #1c1c1c, #000000);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#2d2d2d, #1c1c1c, #000000);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#2d2d2d, #1c1c1c, #000000);
+  /* Standard syntax (must be last) */
+}
+.welcome #login-window {
+  border-radius: 10px;
+  font-size: 20px;
+  height: 31vh;
+  margin-left: 35%;
+  padding: 2vh 2vh;
+  position: relative;
+  top: 34.5vh;
+  width: 30%;
+  z-index: 0;
+}
+.welcome #login-window form {
+  height: 26vh;
+}
+.welcome #login-window form legend {
+  text-align: center;
+  font-size: 24px;
+}
+.welcome #login-window form input {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.welcome #login-window form .alert {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.welcome #login-window form .alert button {
+  font-size: 26px;
+  width: 40px;
+}
+.welcome #login-window form #login, .welcome #login-window form #signup {
+  float: left;
+  margin-bottom: 10px;
+  font-size: 20px;
+  width: 80px;
+}
+.welcome #login-window form #login {
+  margin-left: 61px;
+}
+.welcome #login-window form #signup {
+  margin-left: 20px;
+}
+.welcome #login-window form a {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.welcome #signup-window {
+  font-size: 20px;
+  position: fixed;
+  top: 15vh;
+  margin-left: 285px;
+  height: 62vh;
+  width: 570px;
+  z-index: 2;
+  border-radius: 10px;
+}
+.welcome #signup-window form {
+  height: 26vh;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.welcome #signup-window form legend {
+  text-align: center;
+  font-size: 24px;
+}
+.welcome #signup-window form input {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.welcome #signup-window form .alert {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.welcome #signup-window form .alert button {
+  font-size: 26px;
+  width: 40px;
+}
+.welcome #signup-window form button {
+  display: block;
+  margin: 0 auto 10px;
+  font-size: 20px;
+  width: 80px;
+}
+.welcome #confirm-signup {
+  display: none;
+  font-size: 20px;
+  position: fixed;
+  top: 30vh;
+  margin-left: 285px;
+  height: 40vh;
+  width: 570px;
+  z-index: 2;
+  border-radius: 10px;
+  text-align: center;
+}
+.welcome #confirm-signup .panel-body {
+  padding-top: 124px;
+}
+.welcome #confirm-signup .panel-body h1 {
+  font-size: 40px;
+  margin-top: 0;
+}
+.welcome #confirm-signup .panel-body p {
+  font-size: 28px;
+}
+.welcome #confirm-signup .panel-body button {
+  font-size: 20px;
+}
+.welcome #signup-disabled {
+  display: none;
+  font-size: 20px;
+  position: fixed;
+  top: 30vh;
+  margin-left: 285px;
+  height: 40vh;
+  width: 570px;
+  z-index: 2;
+  border-radius: 10px;
+  text-align: center;
+}
+.welcome #signup-disabled .panel-body {
+  padding-top: 109px;
+}
+.welcome #signup-disabled .panel-body h1 {
+  font-size: 40px;
+  margin-top: 0;
+}
+.welcome #signup-disabled .panel-body p {
+  font-size: 28px;
+  line-height: 20px;
+  margin-bottom: 20px;
+}
+.welcome #signup-disabled .panel-body button {
+  font-size: 20px;
+}
+
+header .navbar-fixed {
+  margin-bottom: 40px;
+}
+
+.modal-overlay {
+  position: fixed;
+  z-index: 999;
+  top: -100px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 125%;
+  width: 100%;
+  background: #000;
+  display: block;
+  opacity: 0.5;
+}
+
+#modal-initializer {
+  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.3);
+  display: block;
+  position: fixed;
+  left: 0;
+  right: 0;
+  background-color: #fafafa;
+  padding: 0;
+  max-height: 70%;
+  width: 55%;
+  margin: auto;
+  overflow-y: auto;
+  border-radius: 2px;
+  top: 25%;
+  z-index: 1000;
+}
+#modal-initializer .modal-content {
+  padding: 24px;
+}
+#modal-initializer .modal-content h1, #modal-initializer .modal-content h2, #modal-initializer .modal-content h3, #modal-initializer .modal-content h4 {
+  margin-top: 0;
+}
+#modal-initializer .modal-content h5 {
+  text-align: center;
+  margin: 50px 0;
+}
+#modal-initializer .modal-content .progress {
+  width: 80%;
+  margin: 50px auto;
+}
+#modal-initializer .modal-content .progress .indeterminate {
+  background-color: #00acc1;
+}
+
+@media only screen and (max-width: 992px) {
+  #modal-initializer {
+    width: 80%;
+  }
+}
+#modal-initializer.modal-fixed-footer .modal-content {
+  position: absolute;
+  height: calc(100% - 56px);
+  max-height: 100%;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.open-orders-content .open-orders-wrapper, .open-orders-content .fulfilled-orders-wrapper, .open-orders-content .cancelled-orders-wrapper, .fulfilled-orders-content .open-orders-wrapper, .fulfilled-orders-content .fulfilled-orders-wrapper, .fulfilled-orders-content .cancelled-orders-wrapper, .cancelled-orders-content .open-orders-wrapper, .cancelled-orders-content .fulfilled-orders-wrapper, .cancelled-orders-content .cancelled-orders-wrapper {
+  clear: both;
+  width: 100%;
+  height: auto;
+  margin-bottom: 60px;
+  overflow: auto;
+  background: white;
+  border-radius: 5px;
+  border: 1px solid #757575;
+}
+.open-orders-content .open-orders-wrapper #open-orders-table, .open-orders-content .open-orders-wrapper #fulfilled-orders-table, .open-orders-content .open-orders-wrapper #cancelled-orders-table, .open-orders-content .fulfilled-orders-wrapper #open-orders-table, .open-orders-content .fulfilled-orders-wrapper #fulfilled-orders-table, .open-orders-content .fulfilled-orders-wrapper #cancelled-orders-table, .open-orders-content .cancelled-orders-wrapper #open-orders-table, .open-orders-content .cancelled-orders-wrapper #fulfilled-orders-table, .open-orders-content .cancelled-orders-wrapper #cancelled-orders-table, .fulfilled-orders-content .open-orders-wrapper #open-orders-table, .fulfilled-orders-content .open-orders-wrapper #fulfilled-orders-table, .fulfilled-orders-content .open-orders-wrapper #cancelled-orders-table, .fulfilled-orders-content .fulfilled-orders-wrapper #open-orders-table, .fulfilled-orders-content .fulfilled-orders-wrapper #fulfilled-orders-table, .fulfilled-orders-content .fulfilled-orders-wrapper #cancelled-orders-table, .fulfilled-orders-content .cancelled-orders-wrapper #open-orders-table, .fulfilled-orders-content .cancelled-orders-wrapper #fulfilled-orders-table, .fulfilled-orders-content .cancelled-orders-wrapper #cancelled-orders-table, .cancelled-orders-content .open-orders-wrapper #open-orders-table, .cancelled-orders-content .open-orders-wrapper #fulfilled-orders-table, .cancelled-orders-content .open-orders-wrapper #cancelled-orders-table, .cancelled-orders-content .fulfilled-orders-wrapper #open-orders-table, .cancelled-orders-content .fulfilled-orders-wrapper #fulfilled-orders-table, .cancelled-orders-content .fulfilled-orders-wrapper #cancelled-orders-table, .cancelled-orders-content .cancelled-orders-wrapper #open-orders-table, .cancelled-orders-content .cancelled-orders-wrapper #fulfilled-orders-table, .cancelled-orders-content .cancelled-orders-wrapper #cancelled-orders-table {
+  margin-bottom: 0;
+}
+.open-orders-content .open-orders-wrapper #open-orders-table th, .open-orders-content .open-orders-wrapper #fulfilled-orders-table th, .open-orders-content .open-orders-wrapper #cancelled-orders-table th, .open-orders-content .fulfilled-orders-wrapper #open-orders-table th, .open-orders-content .fulfilled-orders-wrapper #fulfilled-orders-table th, .open-orders-content .fulfilled-orders-wrapper #cancelled-orders-table th, .open-orders-content .cancelled-orders-wrapper #open-orders-table th, .open-orders-content .cancelled-orders-wrapper #fulfilled-orders-table th, .open-orders-content .cancelled-orders-wrapper #cancelled-orders-table th, .fulfilled-orders-content .open-orders-wrapper #open-orders-table th, .fulfilled-orders-content .open-orders-wrapper #fulfilled-orders-table th, .fulfilled-orders-content .open-orders-wrapper #cancelled-orders-table th, .fulfilled-orders-content .fulfilled-orders-wrapper #open-orders-table th, .fulfilled-orders-content .fulfilled-orders-wrapper #fulfilled-orders-table th, .fulfilled-orders-content .fulfilled-orders-wrapper #cancelled-orders-table th, .fulfilled-orders-content .cancelled-orders-wrapper #open-orders-table th, .fulfilled-orders-content .cancelled-orders-wrapper #fulfilled-orders-table th, .fulfilled-orders-content .cancelled-orders-wrapper #cancelled-orders-table th, .cancelled-orders-content .open-orders-wrapper #open-orders-table th, .cancelled-orders-content .open-orders-wrapper #fulfilled-orders-table th, .cancelled-orders-content .open-orders-wrapper #cancelled-orders-table th, .cancelled-orders-content .fulfilled-orders-wrapper #open-orders-table th, .cancelled-orders-content .fulfilled-orders-wrapper #fulfilled-orders-table th, .cancelled-orders-content .fulfilled-orders-wrapper #cancelled-orders-table th, .cancelled-orders-content .cancelled-orders-wrapper #open-orders-table th, .cancelled-orders-content .cancelled-orders-wrapper #fulfilled-orders-table th, .cancelled-orders-content .cancelled-orders-wrapper #cancelled-orders-table th {
+  font-weight: bold;
+}
+.open-orders-content .open-orders-wrapper #open-orders-table tr, .open-orders-content .open-orders-wrapper #fulfilled-orders-table tr, .open-orders-content .open-orders-wrapper #cancelled-orders-table tr, .open-orders-content .fulfilled-orders-wrapper #open-orders-table tr, .open-orders-content .fulfilled-orders-wrapper #fulfilled-orders-table tr, .open-orders-content .fulfilled-orders-wrapper #cancelled-orders-table tr, .open-orders-content .cancelled-orders-wrapper #open-orders-table tr, .open-orders-content .cancelled-orders-wrapper #fulfilled-orders-table tr, .open-orders-content .cancelled-orders-wrapper #cancelled-orders-table tr, .fulfilled-orders-content .open-orders-wrapper #open-orders-table tr, .fulfilled-orders-content .open-orders-wrapper #fulfilled-orders-table tr, .fulfilled-orders-content .open-orders-wrapper #cancelled-orders-table tr, .fulfilled-orders-content .fulfilled-orders-wrapper #open-orders-table tr, .fulfilled-orders-content .fulfilled-orders-wrapper #fulfilled-orders-table tr, .fulfilled-orders-content .fulfilled-orders-wrapper #cancelled-orders-table tr, .fulfilled-orders-content .cancelled-orders-wrapper #open-orders-table tr, .fulfilled-orders-content .cancelled-orders-wrapper #fulfilled-orders-table tr, .fulfilled-orders-content .cancelled-orders-wrapper #cancelled-orders-table tr, .cancelled-orders-content .open-orders-wrapper #open-orders-table tr, .cancelled-orders-content .open-orders-wrapper #fulfilled-orders-table tr, .cancelled-orders-content .open-orders-wrapper #cancelled-orders-table tr, .cancelled-orders-content .fulfilled-orders-wrapper #open-orders-table tr, .cancelled-orders-content .fulfilled-orders-wrapper #fulfilled-orders-table tr, .cancelled-orders-content .fulfilled-orders-wrapper #cancelled-orders-table tr, .cancelled-orders-content .cancelled-orders-wrapper #open-orders-table tr, .cancelled-orders-content .cancelled-orders-wrapper #fulfilled-orders-table tr, .cancelled-orders-content .cancelled-orders-wrapper #cancelled-orders-table tr {
+  line-height: 24px;
+}
+.open-orders-content .open-orders-wrapper #open-orders-table thead tr, .open-orders-content .open-orders-wrapper #fulfilled-orders-table thead tr, .open-orders-content .open-orders-wrapper #cancelled-orders-table thead tr, .open-orders-content .fulfilled-orders-wrapper #open-orders-table thead tr, .open-orders-content .fulfilled-orders-wrapper #fulfilled-orders-table thead tr, .open-orders-content .fulfilled-orders-wrapper #cancelled-orders-table thead tr, .open-orders-content .cancelled-orders-wrapper #open-orders-table thead tr, .open-orders-content .cancelled-orders-wrapper #fulfilled-orders-table thead tr, .open-orders-content .cancelled-orders-wrapper #cancelled-orders-table thead tr, .fulfilled-orders-content .open-orders-wrapper #open-orders-table thead tr, .fulfilled-orders-content .open-orders-wrapper #fulfilled-orders-table thead tr, .fulfilled-orders-content .open-orders-wrapper #cancelled-orders-table thead tr, .fulfilled-orders-content .fulfilled-orders-wrapper #open-orders-table thead tr, .fulfilled-orders-content .fulfilled-orders-wrapper #fulfilled-orders-table thead tr, .fulfilled-orders-content .fulfilled-orders-wrapper #cancelled-orders-table thead tr, .fulfilled-orders-content .cancelled-orders-wrapper #open-orders-table thead tr, .fulfilled-orders-content .cancelled-orders-wrapper #fulfilled-orders-table thead tr, .fulfilled-orders-content .cancelled-orders-wrapper #cancelled-orders-table thead tr, .cancelled-orders-content .open-orders-wrapper #open-orders-table thead tr, .cancelled-orders-content .open-orders-wrapper #fulfilled-orders-table thead tr, .cancelled-orders-content .open-orders-wrapper #cancelled-orders-table thead tr, .cancelled-orders-content .fulfilled-orders-wrapper #open-orders-table thead tr, .cancelled-orders-content .fulfilled-orders-wrapper #fulfilled-orders-table thead tr, .cancelled-orders-content .fulfilled-orders-wrapper #cancelled-orders-table thead tr, .cancelled-orders-content .cancelled-orders-wrapper #open-orders-table thead tr, .cancelled-orders-content .cancelled-orders-wrapper #fulfilled-orders-table thead tr, .cancelled-orders-content .cancelled-orders-wrapper #cancelled-orders-table thead tr {
+  background: #f2f2f2;
+}
+.open-orders-content .open-orders-wrapper #open-orders-table tbody tr:hover, .open-orders-content .open-orders-wrapper #fulfilled-orders-table tbody tr:hover, .open-orders-content .open-orders-wrapper #cancelled-orders-table tbody tr:hover, .open-orders-content .fulfilled-orders-wrapper #open-orders-table tbody tr:hover, .open-orders-content .fulfilled-orders-wrapper #fulfilled-orders-table tbody tr:hover, .open-orders-content .fulfilled-orders-wrapper #cancelled-orders-table tbody tr:hover, .open-orders-content .cancelled-orders-wrapper #open-orders-table tbody tr:hover, .open-orders-content .cancelled-orders-wrapper #fulfilled-orders-table tbody tr:hover, .open-orders-content .cancelled-orders-wrapper #cancelled-orders-table tbody tr:hover, .fulfilled-orders-content .open-orders-wrapper #open-orders-table tbody tr:hover, .fulfilled-orders-content .open-orders-wrapper #fulfilled-orders-table tbody tr:hover, .fulfilled-orders-content .open-orders-wrapper #cancelled-orders-table tbody tr:hover, .fulfilled-orders-content .fulfilled-orders-wrapper #open-orders-table tbody tr:hover, .fulfilled-orders-content .fulfilled-orders-wrapper #fulfilled-orders-table tbody tr:hover, .fulfilled-orders-content .fulfilled-orders-wrapper #cancelled-orders-table tbody tr:hover, .fulfilled-orders-content .cancelled-orders-wrapper #open-orders-table tbody tr:hover, .fulfilled-orders-content .cancelled-orders-wrapper #fulfilled-orders-table tbody tr:hover, .fulfilled-orders-content .cancelled-orders-wrapper #cancelled-orders-table tbody tr:hover, .cancelled-orders-content .open-orders-wrapper #open-orders-table tbody tr:hover, .cancelled-orders-content .open-orders-wrapper #fulfilled-orders-table tbody tr:hover, .cancelled-orders-content .open-orders-wrapper #cancelled-orders-table tbody tr:hover, .cancelled-orders-content .fulfilled-orders-wrapper #open-orders-table tbody tr:hover, .cancelled-orders-content .fulfilled-orders-wrapper #fulfilled-orders-table tbody tr:hover, .cancelled-orders-content .fulfilled-orders-wrapper #cancelled-orders-table tbody tr:hover, .cancelled-orders-content .cancelled-orders-wrapper #open-orders-table tbody tr:hover, .cancelled-orders-content .cancelled-orders-wrapper #fulfilled-orders-table tbody tr:hover, .cancelled-orders-content .cancelled-orders-wrapper #cancelled-orders-table tbody tr:hover {
+  border-left: 6px solid #42a5f5;
+}
+.open-orders-content .open-orders-wrapper #open-orders-table td:nth-child(1), .open-orders-content .open-orders-wrapper #open-orders-table td:nth-child(2), .open-orders-content .open-orders-wrapper #fulfilled-orders-table td:nth-child(1), .open-orders-content .open-orders-wrapper #fulfilled-orders-table td:nth-child(2), .open-orders-content .open-orders-wrapper #cancelled-orders-table td:nth-child(1), .open-orders-content .open-orders-wrapper #cancelled-orders-table td:nth-child(2), .open-orders-content .fulfilled-orders-wrapper #open-orders-table td:nth-child(1), .open-orders-content .fulfilled-orders-wrapper #open-orders-table td:nth-child(2), .open-orders-content .fulfilled-orders-wrapper #fulfilled-orders-table td:nth-child(1), .open-orders-content .fulfilled-orders-wrapper #fulfilled-orders-table td:nth-child(2), .open-orders-content .fulfilled-orders-wrapper #cancelled-orders-table td:nth-child(1), .open-orders-content .fulfilled-orders-wrapper #cancelled-orders-table td:nth-child(2), .open-orders-content .cancelled-orders-wrapper #open-orders-table td:nth-child(1), .open-orders-content .cancelled-orders-wrapper #open-orders-table td:nth-child(2), .open-orders-content .cancelled-orders-wrapper #fulfilled-orders-table td:nth-child(1), .open-orders-content .cancelled-orders-wrapper #fulfilled-orders-table td:nth-child(2), .open-orders-content .cancelled-orders-wrapper #cancelled-orders-table td:nth-child(1), .open-orders-content .cancelled-orders-wrapper #cancelled-orders-table td:nth-child(2), .fulfilled-orders-content .open-orders-wrapper #open-orders-table td:nth-child(1), .fulfilled-orders-content .open-orders-wrapper #open-orders-table td:nth-child(2), .fulfilled-orders-content .open-orders-wrapper #fulfilled-orders-table td:nth-child(1), .fulfilled-orders-content .open-orders-wrapper #fulfilled-orders-table td:nth-child(2), .fulfilled-orders-content .open-orders-wrapper #cancelled-orders-table td:nth-child(1), .fulfilled-orders-content .open-orders-wrapper #cancelled-orders-table td:nth-child(2), .fulfilled-orders-content .fulfilled-orders-wrapper #open-orders-table td:nth-child(1), .fulfilled-orders-content .fulfilled-orders-wrapper #open-orders-table td:nth-child(2), .fulfilled-orders-content .fulfilled-orders-wrapper #fulfilled-orders-table td:nth-child(1), .fulfilled-orders-content .fulfilled-orders-wrapper #fulfilled-orders-table td:nth-child(2), .fulfilled-orders-content .fulfilled-orders-wrapper #cancelled-orders-table td:nth-child(1), .fulfilled-orders-content .fulfilled-orders-wrapper #cancelled-orders-table td:nth-child(2), .fulfilled-orders-content .cancelled-orders-wrapper #open-orders-table td:nth-child(1), .fulfilled-orders-content .cancelled-orders-wrapper #open-orders-table td:nth-child(2), .fulfilled-orders-content .cancelled-orders-wrapper #fulfilled-orders-table td:nth-child(1), .fulfilled-orders-content .cancelled-orders-wrapper #fulfilled-orders-table td:nth-child(2), .fulfilled-orders-content .cancelled-orders-wrapper #cancelled-orders-table td:nth-child(1), .fulfilled-orders-content .cancelled-orders-wrapper #cancelled-orders-table td:nth-child(2), .cancelled-orders-content .open-orders-wrapper #open-orders-table td:nth-child(1), .cancelled-orders-content .open-orders-wrapper #open-orders-table td:nth-child(2), .cancelled-orders-content .open-orders-wrapper #fulfilled-orders-table td:nth-child(1), .cancelled-orders-content .open-orders-wrapper #fulfilled-orders-table td:nth-child(2), .cancelled-orders-content .open-orders-wrapper #cancelled-orders-table td:nth-child(1), .cancelled-orders-content .open-orders-wrapper #cancelled-orders-table td:nth-child(2), .cancelled-orders-content .fulfilled-orders-wrapper #open-orders-table td:nth-child(1), .cancelled-orders-content .fulfilled-orders-wrapper #open-orders-table td:nth-child(2), .cancelled-orders-content .fulfilled-orders-wrapper #fulfilled-orders-table td:nth-child(1), .cancelled-orders-content .fulfilled-orders-wrapper #fulfilled-orders-table td:nth-child(2), .cancelled-orders-content .fulfilled-orders-wrapper #cancelled-orders-table td:nth-child(1), .cancelled-orders-content .fulfilled-orders-wrapper #cancelled-orders-table td:nth-child(2), .cancelled-orders-content .cancelled-orders-wrapper #open-orders-table td:nth-child(1), .cancelled-orders-content .cancelled-orders-wrapper #open-orders-table td:nth-child(2), .cancelled-orders-content .cancelled-orders-wrapper #fulfilled-orders-table td:nth-child(1), .cancelled-orders-content .cancelled-orders-wrapper #fulfilled-orders-table td:nth-child(2), .cancelled-orders-content .cancelled-orders-wrapper #cancelled-orders-table td:nth-child(1), .cancelled-orders-content .cancelled-orders-wrapper #cancelled-orders-table td:nth-child(2) {
+  width: 10%;
+}
+.open-orders-content .open-orders-wrapper #open-orders-table td:nth-child(3), .open-orders-content .open-orders-wrapper #fulfilled-orders-table td:nth-child(3), .open-orders-content .open-orders-wrapper #cancelled-orders-table td:nth-child(3), .open-orders-content .fulfilled-orders-wrapper #open-orders-table td:nth-child(3), .open-orders-content .fulfilled-orders-wrapper #fulfilled-orders-table td:nth-child(3), .open-orders-content .fulfilled-orders-wrapper #cancelled-orders-table td:nth-child(3), .open-orders-content .cancelled-orders-wrapper #open-orders-table td:nth-child(3), .open-orders-content .cancelled-orders-wrapper #fulfilled-orders-table td:nth-child(3), .open-orders-content .cancelled-orders-wrapper #cancelled-orders-table td:nth-child(3), .fulfilled-orders-content .open-orders-wrapper #open-orders-table td:nth-child(3), .fulfilled-orders-content .open-orders-wrapper #fulfilled-orders-table td:nth-child(3), .fulfilled-orders-content .open-orders-wrapper #cancelled-orders-table td:nth-child(3), .fulfilled-orders-content .fulfilled-orders-wrapper #open-orders-table td:nth-child(3), .fulfilled-orders-content .fulfilled-orders-wrapper #fulfilled-orders-table td:nth-child(3), .fulfilled-orders-content .fulfilled-orders-wrapper #cancelled-orders-table td:nth-child(3), .fulfilled-orders-content .cancelled-orders-wrapper #open-orders-table td:nth-child(3), .fulfilled-orders-content .cancelled-orders-wrapper #fulfilled-orders-table td:nth-child(3), .fulfilled-orders-content .cancelled-orders-wrapper #cancelled-orders-table td:nth-child(3), .cancelled-orders-content .open-orders-wrapper #open-orders-table td:nth-child(3), .cancelled-orders-content .open-orders-wrapper #fulfilled-orders-table td:nth-child(3), .cancelled-orders-content .open-orders-wrapper #cancelled-orders-table td:nth-child(3), .cancelled-orders-content .fulfilled-orders-wrapper #open-orders-table td:nth-child(3), .cancelled-orders-content .fulfilled-orders-wrapper #fulfilled-orders-table td:nth-child(3), .cancelled-orders-content .fulfilled-orders-wrapper #cancelled-orders-table td:nth-child(3), .cancelled-orders-content .cancelled-orders-wrapper #open-orders-table td:nth-child(3), .cancelled-orders-content .cancelled-orders-wrapper #fulfilled-orders-table td:nth-child(3), .cancelled-orders-content .cancelled-orders-wrapper #cancelled-orders-table td:nth-child(3) {
+  width: 48%;
+}
+.open-orders-content .open-orders-wrapper #open-orders-table td:nth-child(4), .open-orders-content .open-orders-wrapper #fulfilled-orders-table td:nth-child(4), .open-orders-content .open-orders-wrapper #cancelled-orders-table td:nth-child(4), .open-orders-content .fulfilled-orders-wrapper #open-orders-table td:nth-child(4), .open-orders-content .fulfilled-orders-wrapper #fulfilled-orders-table td:nth-child(4), .open-orders-content .fulfilled-orders-wrapper #cancelled-orders-table td:nth-child(4), .open-orders-content .cancelled-orders-wrapper #open-orders-table td:nth-child(4), .open-orders-content .cancelled-orders-wrapper #fulfilled-orders-table td:nth-child(4), .open-orders-content .cancelled-orders-wrapper #cancelled-orders-table td:nth-child(4), .fulfilled-orders-content .open-orders-wrapper #open-orders-table td:nth-child(4), .fulfilled-orders-content .open-orders-wrapper #fulfilled-orders-table td:nth-child(4), .fulfilled-orders-content .open-orders-wrapper #cancelled-orders-table td:nth-child(4), .fulfilled-orders-content .fulfilled-orders-wrapper #open-orders-table td:nth-child(4), .fulfilled-orders-content .fulfilled-orders-wrapper #fulfilled-orders-table td:nth-child(4), .fulfilled-orders-content .fulfilled-orders-wrapper #cancelled-orders-table td:nth-child(4), .fulfilled-orders-content .cancelled-orders-wrapper #open-orders-table td:nth-child(4), .fulfilled-orders-content .cancelled-orders-wrapper #fulfilled-orders-table td:nth-child(4), .fulfilled-orders-content .cancelled-orders-wrapper #cancelled-orders-table td:nth-child(4), .cancelled-orders-content .open-orders-wrapper #open-orders-table td:nth-child(4), .cancelled-orders-content .open-orders-wrapper #fulfilled-orders-table td:nth-child(4), .cancelled-orders-content .open-orders-wrapper #cancelled-orders-table td:nth-child(4), .cancelled-orders-content .fulfilled-orders-wrapper #open-orders-table td:nth-child(4), .cancelled-orders-content .fulfilled-orders-wrapper #fulfilled-orders-table td:nth-child(4), .cancelled-orders-content .fulfilled-orders-wrapper #cancelled-orders-table td:nth-child(4), .cancelled-orders-content .cancelled-orders-wrapper #open-orders-table td:nth-child(4), .cancelled-orders-content .cancelled-orders-wrapper #fulfilled-orders-table td:nth-child(4), .cancelled-orders-content .cancelled-orders-wrapper #cancelled-orders-table td:nth-child(4) {
+  width: 10%;
+}
+.open-orders-content .open-orders-wrapper #open-orders-table td:nth-child(5), .open-orders-content .open-orders-wrapper #fulfilled-orders-table td:nth-child(5), .open-orders-content .open-orders-wrapper #cancelled-orders-table td:nth-child(5), .open-orders-content .fulfilled-orders-wrapper #open-orders-table td:nth-child(5), .open-orders-content .fulfilled-orders-wrapper #fulfilled-orders-table td:nth-child(5), .open-orders-content .fulfilled-orders-wrapper #cancelled-orders-table td:nth-child(5), .open-orders-content .cancelled-orders-wrapper #open-orders-table td:nth-child(5), .open-orders-content .cancelled-orders-wrapper #fulfilled-orders-table td:nth-child(5), .open-orders-content .cancelled-orders-wrapper #cancelled-orders-table td:nth-child(5), .fulfilled-orders-content .open-orders-wrapper #open-orders-table td:nth-child(5), .fulfilled-orders-content .open-orders-wrapper #fulfilled-orders-table td:nth-child(5), .fulfilled-orders-content .open-orders-wrapper #cancelled-orders-table td:nth-child(5), .fulfilled-orders-content .fulfilled-orders-wrapper #open-orders-table td:nth-child(5), .fulfilled-orders-content .fulfilled-orders-wrapper #fulfilled-orders-table td:nth-child(5), .fulfilled-orders-content .fulfilled-orders-wrapper #cancelled-orders-table td:nth-child(5), .fulfilled-orders-content .cancelled-orders-wrapper #open-orders-table td:nth-child(5), .fulfilled-orders-content .cancelled-orders-wrapper #fulfilled-orders-table td:nth-child(5), .fulfilled-orders-content .cancelled-orders-wrapper #cancelled-orders-table td:nth-child(5), .cancelled-orders-content .open-orders-wrapper #open-orders-table td:nth-child(5), .cancelled-orders-content .open-orders-wrapper #fulfilled-orders-table td:nth-child(5), .cancelled-orders-content .open-orders-wrapper #cancelled-orders-table td:nth-child(5), .cancelled-orders-content .fulfilled-orders-wrapper #open-orders-table td:nth-child(5), .cancelled-orders-content .fulfilled-orders-wrapper #fulfilled-orders-table td:nth-child(5), .cancelled-orders-content .fulfilled-orders-wrapper #cancelled-orders-table td:nth-child(5), .cancelled-orders-content .cancelled-orders-wrapper #open-orders-table td:nth-child(5), .cancelled-orders-content .cancelled-orders-wrapper #fulfilled-orders-table td:nth-child(5), .cancelled-orders-content .cancelled-orders-wrapper #cancelled-orders-table td:nth-child(5) {
+  width: 10%;
+}
+.open-orders-content .open-orders-wrapper #open-orders-table td:nth-child(6), .open-orders-content .open-orders-wrapper #fulfilled-orders-table td:nth-child(6), .open-orders-content .open-orders-wrapper #cancelled-orders-table td:nth-child(6), .open-orders-content .fulfilled-orders-wrapper #open-orders-table td:nth-child(6), .open-orders-content .fulfilled-orders-wrapper #fulfilled-orders-table td:nth-child(6), .open-orders-content .fulfilled-orders-wrapper #cancelled-orders-table td:nth-child(6), .open-orders-content .cancelled-orders-wrapper #open-orders-table td:nth-child(6), .open-orders-content .cancelled-orders-wrapper #fulfilled-orders-table td:nth-child(6), .open-orders-content .cancelled-orders-wrapper #cancelled-orders-table td:nth-child(6), .fulfilled-orders-content .open-orders-wrapper #open-orders-table td:nth-child(6), .fulfilled-orders-content .open-orders-wrapper #fulfilled-orders-table td:nth-child(6), .fulfilled-orders-content .open-orders-wrapper #cancelled-orders-table td:nth-child(6), .fulfilled-orders-content .fulfilled-orders-wrapper #open-orders-table td:nth-child(6), .fulfilled-orders-content .fulfilled-orders-wrapper #fulfilled-orders-table td:nth-child(6), .fulfilled-orders-content .fulfilled-orders-wrapper #cancelled-orders-table td:nth-child(6), .fulfilled-orders-content .cancelled-orders-wrapper #open-orders-table td:nth-child(6), .fulfilled-orders-content .cancelled-orders-wrapper #fulfilled-orders-table td:nth-child(6), .fulfilled-orders-content .cancelled-orders-wrapper #cancelled-orders-table td:nth-child(6), .cancelled-orders-content .open-orders-wrapper #open-orders-table td:nth-child(6), .cancelled-orders-content .open-orders-wrapper #fulfilled-orders-table td:nth-child(6), .cancelled-orders-content .open-orders-wrapper #cancelled-orders-table td:nth-child(6), .cancelled-orders-content .fulfilled-orders-wrapper #open-orders-table td:nth-child(6), .cancelled-orders-content .fulfilled-orders-wrapper #fulfilled-orders-table td:nth-child(6), .cancelled-orders-content .fulfilled-orders-wrapper #cancelled-orders-table td:nth-child(6), .cancelled-orders-content .cancelled-orders-wrapper #open-orders-table td:nth-child(6), .cancelled-orders-content .cancelled-orders-wrapper #fulfilled-orders-table td:nth-child(6), .cancelled-orders-content .cancelled-orders-wrapper #cancelled-orders-table td:nth-child(6) {
+  font-weight: bold;
+  width: 10%;
+}
+.open-orders-content .open-orders-wrapper #open-orders-table td:nth-child(7), .open-orders-content .open-orders-wrapper #fulfilled-orders-table td:nth-child(7), .open-orders-content .open-orders-wrapper #cancelled-orders-table td:nth-child(7), .open-orders-content .fulfilled-orders-wrapper #open-orders-table td:nth-child(7), .open-orders-content .fulfilled-orders-wrapper #fulfilled-orders-table td:nth-child(7), .open-orders-content .fulfilled-orders-wrapper #cancelled-orders-table td:nth-child(7), .open-orders-content .cancelled-orders-wrapper #open-orders-table td:nth-child(7), .open-orders-content .cancelled-orders-wrapper #fulfilled-orders-table td:nth-child(7), .open-orders-content .cancelled-orders-wrapper #cancelled-orders-table td:nth-child(7), .fulfilled-orders-content .open-orders-wrapper #open-orders-table td:nth-child(7), .fulfilled-orders-content .open-orders-wrapper #fulfilled-orders-table td:nth-child(7), .fulfilled-orders-content .open-orders-wrapper #cancelled-orders-table td:nth-child(7), .fulfilled-orders-content .fulfilled-orders-wrapper #open-orders-table td:nth-child(7), .fulfilled-orders-content .fulfilled-orders-wrapper #fulfilled-orders-table td:nth-child(7), .fulfilled-orders-content .fulfilled-orders-wrapper #cancelled-orders-table td:nth-child(7), .fulfilled-orders-content .cancelled-orders-wrapper #open-orders-table td:nth-child(7), .fulfilled-orders-content .cancelled-orders-wrapper #fulfilled-orders-table td:nth-child(7), .fulfilled-orders-content .cancelled-orders-wrapper #cancelled-orders-table td:nth-child(7), .cancelled-orders-content .open-orders-wrapper #open-orders-table td:nth-child(7), .cancelled-orders-content .open-orders-wrapper #fulfilled-orders-table td:nth-child(7), .cancelled-orders-content .open-orders-wrapper #cancelled-orders-table td:nth-child(7), .cancelled-orders-content .fulfilled-orders-wrapper #open-orders-table td:nth-child(7), .cancelled-orders-content .fulfilled-orders-wrapper #fulfilled-orders-table td:nth-child(7), .cancelled-orders-content .fulfilled-orders-wrapper #cancelled-orders-table td:nth-child(7), .cancelled-orders-content .cancelled-orders-wrapper #open-orders-table td:nth-child(7), .cancelled-orders-content .cancelled-orders-wrapper #fulfilled-orders-table td:nth-child(7), .cancelled-orders-content .cancelled-orders-wrapper #cancelled-orders-table td:nth-child(7) {
+  width: 2%;
+}
+.open-orders-content .open-orders-wrapper #open-orders-table td:nth-child(7) i, .open-orders-content .open-orders-wrapper #fulfilled-orders-table td:nth-child(7) i, .open-orders-content .open-orders-wrapper #cancelled-orders-table td:nth-child(7) i, .open-orders-content .fulfilled-orders-wrapper #open-orders-table td:nth-child(7) i, .open-orders-content .fulfilled-orders-wrapper #fulfilled-orders-table td:nth-child(7) i, .open-orders-content .fulfilled-orders-wrapper #cancelled-orders-table td:nth-child(7) i, .open-orders-content .cancelled-orders-wrapper #open-orders-table td:nth-child(7) i, .open-orders-content .cancelled-orders-wrapper #fulfilled-orders-table td:nth-child(7) i, .open-orders-content .cancelled-orders-wrapper #cancelled-orders-table td:nth-child(7) i, .fulfilled-orders-content .open-orders-wrapper #open-orders-table td:nth-child(7) i, .fulfilled-orders-content .open-orders-wrapper #fulfilled-orders-table td:nth-child(7) i, .fulfilled-orders-content .open-orders-wrapper #cancelled-orders-table td:nth-child(7) i, .fulfilled-orders-content .fulfilled-orders-wrapper #open-orders-table td:nth-child(7) i, .fulfilled-orders-content .fulfilled-orders-wrapper #fulfilled-orders-table td:nth-child(7) i, .fulfilled-orders-content .fulfilled-orders-wrapper #cancelled-orders-table td:nth-child(7) i, .fulfilled-orders-content .cancelled-orders-wrapper #open-orders-table td:nth-child(7) i, .fulfilled-orders-content .cancelled-orders-wrapper #fulfilled-orders-table td:nth-child(7) i, .fulfilled-orders-content .cancelled-orders-wrapper #cancelled-orders-table td:nth-child(7) i, .cancelled-orders-content .open-orders-wrapper #open-orders-table td:nth-child(7) i, .cancelled-orders-content .open-orders-wrapper #fulfilled-orders-table td:nth-child(7) i, .cancelled-orders-content .open-orders-wrapper #cancelled-orders-table td:nth-child(7) i, .cancelled-orders-content .fulfilled-orders-wrapper #open-orders-table td:nth-child(7) i, .cancelled-orders-content .fulfilled-orders-wrapper #fulfilled-orders-table td:nth-child(7) i, .cancelled-orders-content .fulfilled-orders-wrapper #cancelled-orders-table td:nth-child(7) i, .cancelled-orders-content .cancelled-orders-wrapper #open-orders-table td:nth-child(7) i, .cancelled-orders-content .cancelled-orders-wrapper #fulfilled-orders-table td:nth-child(7) i, .cancelled-orders-content .cancelled-orders-wrapper #cancelled-orders-table td:nth-child(7) i {
+  color: #9e9e9e;
+  cursor: pointer;
+}
+
+.products-content #products-table .sorter {
+  float: right;
+  padding: 2px 6px;
+  font-size: 16px;
+}
+.products-content #products-table .fa-caret-down {
+  margin-right: 5px;
+}
+.products-content #products-table a {
+  float: right;
+  margin: 0;
+  width: 30px;
+  height: 30px;
+}
+.products-content #products-table a i {
+  position: relative;
+  top: -18px;
+  line-height: 30px;
+  vertical-align: text-top;
+}
+.products-content #products-table .edit-button {
+  margin-right: 5px;
+}
+
+.customers-content .customers-wrapper {
+  clear: both;
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  margin-bottom: 60px;
+  overflow: auto;
+}
+.customers-content .customers-wrapper #customers-table {
+  margin-bottom: 0;
+}
+.customers-content .customers-wrapper #customers-table td {
+  cursor: pointer;
+  padding: 5px;
+  text-transform: capitalize;
+  height: 46px;
+}
+
+html {
+  min-height: 100%;
+  position: relative;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.input-group {
+  display: table;
+}
+.input-group a {
+  padding: 0 15px;
+  width: 50px;
+}
+
+.input-group input, .suffix {
+  display: table-cell;
+}
+
+.suffix {
+  width: 1%;
+}
+
+main {
+  flex: 1 0 auto;
+}
+main .container .tabs {
+  margin-bottom: 20px;
+}
+main .container .tabs .tab a {
+  color: rgba(0, 172, 193, 0.7);
+}
+main .container .tabs .tab a:hover {
+  color: #00acc1;
+}
+main .container .tabs .tab a.active {
+  color: #00acc1;
+}
+main .container .tabs .indicator {
+  background-color: #00acc1;
+}
+main .container .home, main .container .match {
+  width: 60%;
+  margin: 0 auto;
+  background: #eee;
+  border-radius: 5px;
+  padding: 40px;
+}
+main .container .home .col h1, main .container .match .col h1 {
+  margin-top: 0;
+  font-size: 4rem;
+}
+main .container .home .col h2, main .container .match .col h2 {
+  font-size: 1.8rem;
+}
+main .container section {
+  border-bottom: 1px solid #ccc;
+}
+main .container section:last-of-type {
+  border-bottom: none;
+}
+main .container section .input-field {
+  margin-top: 0;
+}
+main .container section h1 {
+  margin-top: 0;
+  font-size: 2rem;
+}
+main .container section h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+main .container section h3 {
+  font-size: 1.5rem;
+}
+main .container section form .row {
+  margin-bottom: 0;
+}
+main .container section form button {
+  margin: 30px 0;
+}
+main .container .match {
+  margin-bottom: 40px;
+}
+main .container .match h2 {
+  text-align: center;
+}
+main .container .match img {
+  display: block;
+  margin: 40px auto 0;
+}
+
+/*! Footer */
+footer h5 {
+  color: #9d9d9d;
+  font-style: italic;
+}
+footer p, footer li {
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 10px 0;
+}
+footer a {
+  color: #fff;
+  text-decoration: none;
+  -webkit-transition: color .5s, background .5s;
+  transition: color .5s, background .5s;
+}
+footer a:hover {
+  color: #65c2ed;
+}
+footer .footer-contact h5 {
+  margin-bottom: 20px;
+}
+footer .footer-contact .fa {
+  width: 20px;
+  padding-right: 10px;
+  color: #fff;
+}
+footer .footer-navigation ul {
+  width: 50%;
+  float: left;
+}
+footer .footer-navigation .fa {
+  padding-right: 10px;
+  color: #fff;
+}
+footer .footer-copyright {
+  text-align: center;
+}
+footer .social li {
+  float: left;
+}
+footer .social a {
+  display: inline-block;
+  padding: 0 7px;
+  margin: 3px 10px 10px 0;
+  vertical-align: middle;
+}
+
+/*! Footer */
+@media only screen and (max-width: 1199px) {
+  header .navbar-fixed .brand-logo {
+    font-size: 1.2rem;
+  }
+  header .navbar-fixed .left a, header .navbar-fixed .right a {
+    padding: 0 8px;
+  }
+  header .navbar-fixed .left {
+    left: 122px;
+    font-size: 1rem;
+  }
+  header .navbar-fixed .right {
+    font-size: 1rem;
+  }
+
+  main .container .card-content p {
+    font-size: 2rem;
+  }
+  main .container .card-table .card-content table td.truncate {
+    max-width: 225px;
+  }
+
+  footer .footer-navigation li {
+    width: 110px;
+  }
+}
